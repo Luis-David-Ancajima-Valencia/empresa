@@ -52,7 +52,6 @@
             <div class="modal-footer">
                 <form id="form-elimina" action="delete" method="post">
                     <input type="hidden" name="_method" value="delete">
-                    <input type="hidden" name="empleado_id" value="<?= $empleado['id']; ?>">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-danger">Eliminar</button>
                 </form>

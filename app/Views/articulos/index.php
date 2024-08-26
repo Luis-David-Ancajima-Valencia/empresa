@@ -2,32 +2,34 @@
 
 <?= $this->section('contenido'); ?>
 
-<h3 class="my-3" id="titulo">Departamentos</h3>
+<h3 class="my-3" id="titulo">Articulos</h3>
 
-<a href="<?= base_url('departamentos/new'); ?>" class="btn btn-success">Agregar</a>
+<a href="<?= base_url('articulos/new'); ?>" class="btn btn-success">Agregar</a>
 
 <table class="table table-hover table-bordered my-3" aria-describedby="titulo">
     <thead class="table-dark">
         <tr>
-            <th scope="col">N°</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Categoria</th>
             <th scope="col">Opciones</th>
         </tr>
     </thead>
 
     <tbody>
 
-        <?php foreach ($departamentos as $departamento) : ?>
+        <?php foreach ($articulos as $articulo) : ?>
 
             <tr>
-                <td><?= $departamento['id']; ?></td>
-                <td><?= $departamento['nombre']; ?></td>
-                <td><?= $departamento['descripcion']; ?></td>
+                <td><?= $articulo['nombre']; ?></td>
+                <td><?= $articulo['precio']; ?></td>
+                <td><?= $articulo['stock']; ?></td>
+                <td><?= $articulo['categoria']; ?></td>
                 <td>
-                    <a href="<?= base_url('departamentos/' . $departamento['id'] . '/edit'); ?>" class="btn btn-warning btn-sm me-2">Editar</a>
+                    <a href="<?= base_url('articulos/' . $articulo['id'] . '/edit'); ?>" class="btn btn-warning btn-sm me-2">Editar</a>
 
-                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?= base_url('departamentos/delete/' . $departamento['id']); ?>">Eliminar</button>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#eliminaModal" data-bs-url="<?= base_url('articulos/delete/' . $articulo['id']); ?>">Eliminar</button>
                 </td>
             </tr>
         <?php endforeach; ?>

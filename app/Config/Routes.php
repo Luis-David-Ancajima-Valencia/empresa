@@ -31,6 +31,15 @@ $routes->post('departamentos/(:num)','Departamentos::update/$1');
 $routes->post('departamentos/delete/(:num)', 'Departamentos::delete/$1');
 
 
+$routes->get('articulos', 'Articulos::index',['controller' => 'Articulos' , 'placeholder' => '(:num)']);
+
+$routes->get('articulos/new', 'Articulos::new');
+$routes->post('articulos', 'Articulos::create');
+
+$routes->get('articulos/(:num)/edit','Articulos::edit/$1');
+$routes->post('articulos/(:num)','Articulos::update/$1');
+
+$routes->post('articulos/delete/(:num)', 'Articulos::delete/$1');
 
 
 

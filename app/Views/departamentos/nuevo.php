@@ -18,7 +18,7 @@
     </div>
 
     <div class="col-md-6">
-        <label for="clave" class="form-label">Descripcion</label>
+        <label for="descripcion" class="form-label">Descripcion</label>
         <input type="text" class="form-control" id="descripcion" name="descripcion" value="<?= set_value('descripcion') ?>" >
     </div>
 
